@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vet Innovation Lab - Think. Build . Test . Improve</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-container">
+    <div class="hero-content">
+        <div class="header_nav">
+            <a href="index.html" class="brand_logo">
+                  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="90" stroke="#4f9a24" stroke-width="8" stroke-dasharray="440" stroke-dashoffset="60" />
+            <path d="M140 100 C150 130 130 160 100 160 C120 140 130 120 140 100 Z" fill="#4f9a24" />
+            <path d="M125 115 C145 125 155 145 140 160 C135 145 125 130 125 115 Z" fill="#0e3b2b" />
+            <ellipse cx="75" cy="75" rx="14" ry="20" transform="rotate(-20 75 75)" fill="#ffffff" />
+            <ellipse cx="102" cy="62" rx="14" ry="20" transform="rotate(-5 102 62)" fill="#ffffff" />
+            <ellipse cx="130" cy="75" rx="14" ry="20" transform="rotate(20 130 75)" fill="#ffffff" />
+            <ellipse cx="58" cy="98" rx="12" ry="17" transform="rotate(-40 58 98)" fill="#ffffff" />
+            <path d="M72 128 C65 110 82 95 102 95 C122 95 139 110 132 128 C126 142 112 148 102 148 C92 148 78 142 72 128 Z" fill="#ffffff" />
+          </svg>
+          <div>
+            <div class="brand-title">VET INNOVATIONN LAB</div>
+            <div class="brand-tagline">Faculty of Veterinary Medicine</div>
+          </div>
+            </a>
+            
+            <nav class="nav-tabs">
+                <a href="index.html" class="nav-tab-btn active">index.html</a>
+                <a href="projects.html" class="nav-tab-btn">projects</a>
+                <a href="community.html" class="nav-tab-btn">community</a>
+                <a href="about.html" class="nav-tab-btn">about</a>
+                <a href="support.html" class="nav-tab-btn">support</a>
+            </nav>
+            <div class="top controls">
+                <button class="btn-icon" onclick="toggleTheme()">Theme</button>
+            </div>
+        </div>
+        <h1 class="hero-headline">Think. Build. Test. Improve.</h1>
+        <p class="hero-description">Turning real Veterinary challenges into practical technological and clinical solutions through collaborative research,prototyping, and AI.</p>
+    </div>
+    </header>
+    <main class="view-container active">
+        <header class="hero-container">
+  <!-- Background Image Slideshow Layer -->
+  <div class="bg-slideshow" id="bgSlideshow">
+    <div class="bg-slide active kenburns-top-left" style="background-image: url('https://i.postimg.cc/2657dzK7/IMG-20261114-WA0048.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('https://i.postimg.cc/bJ44wQkH/IMG-20261028-WA0004.jpg');"></div>
+  </div>
+  
+  <div class="video-overlay"></div>
+
+  <div class="hero-content">
+    <!-- Your existing header-nav, hero-headline, and hero-description stay here -->
+  </div>
+</header>
+        <div class="grid-2col">
+            <div>
+                <h2 class="section -title">Top Innovation Pipeline</h2>
+                <div class="ideas-grid" id="HomeIdeasGrid"></div>
+            </div>
+            <aside>
+                <div class="card">
+                    <h2 class="section-title" style="font-size:1.3rem;">Post an Idea</h2>
+                    <form id="IdeaForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label for="ideaArea">Focus Area</label>
+                            <select id="ideaArea" class="form-control" required>
+                                <option value="Clinical practice">Clinical practice</option>
+                                <option value="Livestock and farm">Livestock and Farm</option>
+                                <option value="Diagnostics">Diagnostics</option>
+                                <option value="AI and Data">AI and Data</option>
+                                <option value="Public health">Public health</option>
+                                <option value="Education">Education</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Idea Descc">Problem Description</label>
+                            <textarea id="ideaDesc" class="form-control" placeholder="Describe the problem..."required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Post idea</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <div class="footer-brand">Vet Innovation Lab</div>
+        <div class="footer-copy">Faculty of Veterinary Medicine • Think. Build. Test. Improve.</div>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </footer>
+    <script src="app.js"></script>
+    
+</body>
+</html>
