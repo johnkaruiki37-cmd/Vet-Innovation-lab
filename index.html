@@ -7,11 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+      <!-- Background Image Slideshow Layer -->
+  <div class="bg-slideshow" id="bgSlideshow">
+    <div class="bg-slide active kenburns-top-left" style="background-image: url('https://i.postimg.cc/2657dzK7/IMG-20261114-WA0048.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('https://i.postimg.cc/bJ44wQkH/IMG-20261028-WA0004.jpg');"></div>
+  </div>
+  
+  <div class="image-overlay"></div>
+
+  <div class="hero-content">
+    <!-- Your  navigation and hero text go here -->
+  </div>
+    <div class="page-wrapper">
     <header class="hero-container">
     <div class="hero-content">
         <div class="header_nav">
             <a href="index.html" class="brand_logo">
-                  <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg viewBox="0 0 1500 200" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="100" cy="100" r="90" stroke="#4f9a24" stroke-width="8" stroke-dasharray="440" stroke-dashoffset="60" />
             <path d="M140 100 C150 130 130 160 100 160 C120 140 130 120 140 100 Z" fill="#4f9a24" />
             <path d="M125 115 C145 125 155 145 140 160 C135 145 125 130 125 115 Z" fill="#0e3b2b" />
@@ -22,13 +34,13 @@
             <path d="M72 128 C65 110 82 95 102 95 C122 95 139 110 132 128 C126 142 112 148 102 148 C92 148 78 142 72 128 Z" fill="#ffffff" />
           </svg>
           <div>
-            <div class="brand-title">VET INNOVATIONN LAB</div>
+            <div class="brand-title">VET INNOVATION LAB</div>
             <div class="brand-tagline">Faculty of Veterinary Medicine</div>
           </div>
             </a>
             
             <nav class="nav-tabs">
-                <a href="index.html" class="nav-tab-btn active">index.html</a>
+                <a href="index.html" class="nav-tab-btn active">home</a>
                 <a href="projects.html" class="nav-tab-btn">projects</a>
                 <a href="community.html" class="nav-tab-btn">community</a>
                 <a href="about.html" class="nav-tab-btn">about</a>
@@ -38,52 +50,50 @@
                 <button class="btn-icon" onclick="toggleTheme()">Theme</button>
             </div>
         </div>
-        <h1 class="hero-headline">Think. Build. Test. Improve.</h1>
+        <h1 class="text-flicker-in-glow">Think. Build. Test. Improve.</h1>
         <p class="hero-description">Turning real Veterinary challenges into practical technological and clinical solutions through collaborative research,prototyping, and AI.</p>
     </div>
-    </header>
-    <main class="view-container active">
-        <header class="hero-container">
-  <!-- Background Image Slideshow Layer -->
-  <div class="bg-slideshow" id="bgSlideshow">
-    <div class="bg-slide active kenburns-top-left" style="background-image: url('https://i.postimg.cc/2657dzK7/IMG-20261114-WA0048.jpg');"></div>
-    <div class="bg-slide" style="background-image: url('https://i.postimg.cc/bJ44wQkH/IMG-20261028-WA0004.jpg');"></div>
-  </div>
-  
-  <div class="video-overlay"></div>
-
-  <div class="hero-content">
-    <!-- Your existing header-nav, hero-headline, and hero-description stay here -->
-  </div>
-</header>
-        <div class="grid-2col">
-            <div>
-                <h2 class="section -title">Top Innovation Pipeline</h2>
-                <div class="ideas-grid" id="HomeIdeasGrid"></div>
+            <section class="group-photo-section" style="margin: 2.5rem 0;">
+            <div class="overview-card" style="padding:1.5rem; text-align:center;">
+                <h3 style="font-family: Georgia, serif; font-size: 1.4rem; color:#ffffff; margin-bottom: 1rem;">The Vet Innovation Lab Community</h3>
+                <div style="border-radius: 10px; overflow: hidden; border:1px solid rgba(79, 154, 36,0.45); max-height: 450px;">
+                    <img src="https://i.postimg.cc/rpyqFmF6/Screenshot-20261118-175928-(2.).jpg" alt="Vet Innovation Lab"  style="width: 100%; height: auto; object-fit: cover; display: block;">
             </div>
-            <aside>
-                <div class="card">
-                    <h2 class="section-title" style="font-size:1.3rem;">Post an Idea</h2>
-                    <form id="IdeaForm" onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <label for="ideaArea">Focus Area</label>
-                            <select id="ideaArea" class="form-control" required>
-                                <option value="Clinical practice">Clinical practice</option>
-                                <option value="Livestock and farm">Livestock and Farm</option>
-                                <option value="Diagnostics">Diagnostics</option>
-                                <option value="AI and Data">AI and Data</option>
-                                <option value="Public health">Public health</option>
-                                <option value="Education">Education</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="Idea Descc">Problem Description</label>
-                            <textarea id="ideaDesc" class="form-control" placeholder="Describe the problem..."required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Post idea</button>
-                    </form>
+            <p style="color: #d1e2d9; font-size: 0.95rem; margin-top: 1rem; line-height: 1.5;">
+                Students, Lecturers, and researchers from the Faculty of Veterinary Medicine gathered at the University of Nairobi campus to collaborate on smart livestock tracking, clinical triage apps, and agricultural tech.
+            </p>
+        </div>
+    </section>
+</header>
+<main class="main-container">
+        <section class="overview-section">
+            <h2>Vet Innovation Lab Overview</h2>
+            <p class="Overview-intro">Empowering veterinary students and researchers in East Africa to turn real-world clinical and agricultural challenges into practical technological and Biological solutions.</p>
+            <div class="overview grid">
+                <div class="overview-card">
+                    <h3>Projects</h3>
+                    <p> Explore our active innovation pipeline, including smart livestock monitoring tools, diagnostic apps, and automated agricultural workflows.</p>
+                    <a href="projects.html" class="overview-link">View Projects &rarr;</a>
                 </div>
-            </aside>
+                    <div class="overview-card">
+                        <h3>Community</h3>
+                        <p>Meet our network of 93+ veterinary students, lecturers, and researchers collaborating across East Africa  to pioneer  veterinary tech.</P>
+                            <a href="community.html" class="overview-link">Meet the Community &rarr;</a>
+
+                    </div>
+                    <div class="overview-card">
+                        <h3>About Us</h3>
+                        <p>Learn about our four core stages-Think,Build, Test, and Improve-and our mission to bridge veterinary medicine  and software engineering .</p>
+                        <a href="about.html" class="overview-link">Read Our Story &rarr;</a>
+                </div>
+                <div class="overview-card">
+                    <h3>Support &amp; Contact</h3>
+                    <p>Get in touch with our Team , collaborate on research,  or support student -led veterinary prototype and maker space initiatives.</p>
+                    <a href="support.html" class="overview-link">Get Involved &rarr;</a>
+                </div>
+            </div>
+        </section>
+            
         </div>
     </main>
     <footer class="site-footer">
@@ -102,6 +112,7 @@
       </nav>
     </div>
   </footer>
+</div>
     <script src="app.js"></script>
     
 </body>

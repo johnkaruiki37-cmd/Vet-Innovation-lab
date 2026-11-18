@@ -46,6 +46,7 @@ body {
   color: var(--hero-text);
   overflow: hidden;
   padding: 2.5rem 1.5rem 3rem;
+  min-height:auto;
 }
 
 .video-background {
@@ -692,24 +693,19 @@ textarea.form-control {
 }
 /* Background Image Slideshow */
 .bg-slideshow {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  inset:0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 0;
   pointer-events: none;
 }
 
 .bg-slide {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset:0;
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
@@ -717,6 +713,65 @@ textarea.form-control {
 
 .bg-slide.active {
   opacity: 1;
+}
+/*Dark Green Overlay so white text pops */
+.image-overlay{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  z-index:1;
+  pointer-events: none;
+  background:linear-gradient(
+    to bottom,
+    rgba(7, 34,24, 0.72)0%,
+    rgba(14,59,43, 0.85) 60%,
+    rgba(7, 34, 24,0.95) 100%
+  );
+}
+
+/*Layering 2: All Visible Content (Header, Main, Footer)*/
+.page-wrapper{
+  position: relative;
+  z-index:10;
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  transform: none;
+  animation: none;
+}
+/* Frosted Glass Effect on Overview Cards  for Readability*/
+.overview-card{
+  background: rgba(4, 117, 51, 0.233);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(4, 146, 63, 0.274);
+  border-radius: 12px;
+  padding: 1.75rem;
+  color:#ffffff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+/*Ensure all headings and text inside cards are bright white/leaf green*/
+.overview-card h3,
+.overview-card h2,
+.overview-card span,
+.overview-card p{
+  color:#ffffff
+}
+.overview-card span{
+  color: var(--primary-leaf)
+  font-weight: bold;
+}
+/*Prevent hero from pushing overview cards off-screen*/
+.hero-container{
+  position: relative;
+  padding: 2rem 1.5rem 1.5rem;
+  min-height:auto;
+}
+.main-container{
+  position: relative;
+  flex: 1;
 }
 /* Site Footer */
 .site-footer {
@@ -772,4 +827,81 @@ textarea.form-control {
 .footer-copy {
   font-size: 0.8rem;
   color: #94ab9d;
+}
+body{
+  margin:0;
+  background-color: #072218;
+  color: #ffffff;
+  font-family: system-ui, -apple-system,sans-serif;
+}
+/*Hero container & Background Layering */
+.hero-content{
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin:0;
+  width: 100%;
+}
+.brand-title{
+  color: #ffffff !important;
+  font-family:Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+/*Community Member Quote Card Layout*/
+.member-quote-card{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: rgba(7, 34, 24,0.85);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(79, 154,36, 0.45);
+  border-radius: 14px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+@media(min-width:768px){
+  .member-quote-card{
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.member-photo-wrapper{
+  flex-shrink:0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px;
+  margin: 0 auto;
+}
+@media(min-width:768px){
+  .member-photo-wrapper{
+    margin:0;
+  }
+}
+.member-photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.member-role{
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: var(--primary-leaf);
+  font-weight: bold;
+}
+.member-quote{
+  font-family: Georgia, serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color:#e2ede5;
+  line-height: 1.6;
+  margin: 0;
+  border-left: 3px solid var(--primary-leaf);
+  padding-left: 1rem;
 }
